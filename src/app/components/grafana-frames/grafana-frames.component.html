@@ -1,0 +1,7 @@
+
+    <div *ngFor="let item of datagen;" style="margin: 40px; background-color: grey; width: fit-content; margin: 10px; border-radius: 20px; text-align: center;" >
+        <p >Name:{{item.name}}</p>
+        <iframe style="margin-bottom: 20px;" [src]="item.url | safe" width="450" height="200" frameborder="0"></iframe>   
+    <button type="button" (click)="deleteCard(item)">delete</button>
+    </div>
+

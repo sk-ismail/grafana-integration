@@ -1,0 +1,25 @@
+<!-- This button triggers the overlay and is it's origin -->
+<button style="float: right;" (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+    {{isOpen ? "X" : "+"}}
+  </button>
+  
+  <!-- This template displays the overlay content and is connected to the button -->
+  <ng-template
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="trigger"
+    [cdkConnectedOverlayOpen]="isOpen"
+  >
+  <form>
+    <div class="example-list">
+      <label>Name:</label>
+      <br>
+      <input type="text" id="gname" name="gname" placeholder="Enter the Name" [(ngModel)]="gname" >
+      <br>
+      <label>Url:</label>
+      <br>
+      <input type="url" id="gurl" name="gurl" [(ngModel)]="gurl" placeholder="Paste the url" >
+      <button type="button" (click)="submitForm()">submit</button>
+      </div>
+  </form>
+
+  </ng-template>
