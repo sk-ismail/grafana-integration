@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    
 }
 
 body {
@@ -8,7 +9,8 @@ body {
     /* display: grid; */
     /* justify-items: center; */
     /* align-items: center; */
-    background-color: #ffffff;
+   
+    background-color: black;
 }
 
 /* Overwrite the styles of the mat-dialog-container element globally, but only for those

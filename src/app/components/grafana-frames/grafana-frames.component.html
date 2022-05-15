@@ -1,7 +1,13 @@
+<div  class="grafanaMain" [ngStyle]="{ 'flex-wrap': datagen.length>3? 'wrap': 'nowrap'}">
 
-    <div *ngFor="let item of datagen;" style="margin: 40px; background-color: grey; width: fit-content; margin: 10px; border-radius: 20px; text-align: center;" >
-        <p >Name:{{item.name}}</p>
-        <iframe style="margin-bottom: 20px;" [src]="item.url | safe" width="450" height="200" frameborder="0"></iframe>   
-    <button type="button" (click)="deleteCard(item)">delete</button>
+    <div *ngFor="let item of datagen;" class="gFrames"   >
+        <div class="gcontent">
+        <p style=" margin-left: 15px; margin-top: 7px; color: rgb(0, 0, 0);">Name:{{item.name}}</p>
+        <button style="margin-right: 10px;  margin-top: 7px;" class="del-btn" type="button" (click)="deleteCard(item)">X</button>
     </div>
+        <iframe [ngStyle]=" { width: datagen.length==1? '95vw': datagen.length==2? '45vw': datagen.length>=3? '30vw': '0vw', height: datagen.length==1? '90vh': datagen.length==2? '50vh': datagen.length>=3? '33vh': '0vh'} " style="margin-bottom: 20px;" [src]="item.url | safe"  frameborder="0"></iframe>   
+   
+    </div>
+</div>
+
 
