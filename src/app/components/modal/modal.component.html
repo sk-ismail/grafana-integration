@@ -1,25 +1,46 @@
-<!-- This button triggers the overlay and is it's origin -->
-<button style="left: 95% ; top: 95%; position: fixed; " (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
-    {{isOpen ? "X" : "+"}}
-  </button>
-  
-  <!-- This template displays the overlay content and is connected to the button -->
-  <ng-template
-    cdkConnectedOverlay
-    [cdkConnectedOverlayOrigin]="trigger"
-    [cdkConnectedOverlayOpen]="isOpen"
-  >
-  <form>
-    <div class="example-list">
-      <label>Name:</label>
-      <br>
-      <input type="text" id="gname" name="gname" placeholder="Enter the Name" [(ngModel)]="gname" >
-      <br>
-      <label>Url:</label>
-      <br>
-      <input type="url" id="gurl" name="gurl" [(ngModel)]="gurl" placeholder="Paste the url" >
-      <button type="button" (click)="submitForm()">submit</button>
-      </div>
-  </form>
 
-  </ng-template>
+<div id="body"> 
+  
+  <div id="chat-circle" class="btn btn-raised">
+          <div id="chat-overlay"></div>
+          <i class="material-icons" style="font-size: 28px;">add</i>
+    </div>
+    
+    <div class="chat-box">
+      <div class="chat-box-header">
+        Add new Graph
+        <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+      </div>
+      <div class="chat-box-body">
+        <div class="chat-box-overlay">   
+        </div>
+        <div class="chat-logs">
+          <form>
+            <div>     
+              <div class="form__group field">
+                <input style="width: 170%;" type="input" class="form__field" placeholder="Name" name="gname" id='gname' [(ngModel)]="gname" required >
+                <label for="name" class="form__label">Name</label>
+              </div>
+              <br>
+              <div class="form__group field">
+                <input style="width: 170%;" type="url" class="form__field" placeholder="Url" name="gurl" id="gurl" [(ngModel)]="gurl" required >
+                <label for="name" class="form__label">Url</label>
+              </div>
+              <!-- <input required type="url" id="gurl" name="gurl" [(ngModel)]="gurl" placeholder="Paste the url" required> -->
+              <button type="submit" class="chat-submit" (click)="submitForm()"><i class="material-icons">send</i></button>
+              </div>
+          </form>   
+        </div><!--chat-log -->
+      </div>
+      <div class="chat-input">      
+        <!-- <form>
+        <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+        </form>    -->
+
+      </div>
+    </div>
+    
+    
+    
+    
+  </div>

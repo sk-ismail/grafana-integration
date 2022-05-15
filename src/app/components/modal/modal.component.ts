@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-modal',
@@ -26,7 +27,16 @@ export class popUpModalComponent implements OnInit {
   submitForm(){
       console.log(this.gname);
       console.log(this.gurl);
-      this.dataValues.emit({ name: this.gname, url: this.gurl})
+      if(this.gname===""){
+        alert('enter the data');
+      }
+      else if(this.gurl===""){
+        alert('enter the data')
+      }
+      else{
+        this.dataValues.emit({ name: this.gname, url: this.gurl})
+      }
+      
       // console.log(this.dataValues)
   }
 
