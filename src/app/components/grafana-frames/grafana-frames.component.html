@@ -2,8 +2,8 @@
 
     <div *ngFor="let item of datagen;" class="gFrames"   >
         <div class="gcontent">
-        <p style=" margin-left: 30px; margin-top: 10px; color: rgb(0, 0, 0); font-size: 1.1rem;">{{item.name}}</p>
-        <button style="margin-right: 10px;  margin-top: 7px;" class="del-btn" type="button" (click)="deleteCard(item)">X</button>
+        <p class="itemName" >{{item.name}}</p>
+        <button class="del-btn" type="button" (click)="deleteCard(item)">X</button>
     </div>
         <iframe [ngStyle]=" { width: datagen.length==1? '95vw': datagen.length==2? '45vw': datagen.length>=3? '30vw': '0vw', height: datagen.length==1? '90vh': datagen.length==2? '50vh': datagen.length>=3? '33vh': '0vh'} " style="margin-bottom: 20px;" [src]="item.url | safe"  frameborder="0"></iframe>   
    
