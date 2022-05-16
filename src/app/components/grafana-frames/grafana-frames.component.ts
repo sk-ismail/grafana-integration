@@ -14,11 +14,6 @@ export class GrafanaFramesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let checking=()=>{
-      // console.log(JSON.parse(this.data1));
-      console.log(this.datagen)
-    }
-    checking()
   }
   deleteCard(val: any) {  
     console.log("val",val)

@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-modal',
@@ -11,9 +9,6 @@ import { isEmpty } from 'rxjs';
 
 
 export class popUpModalComponent implements OnInit {
- 
-  formArray:FormArray=new FormArray([]);
-  isOpen = false;
   // @Input () id : any;
   @Output () dataValues=new EventEmitter<object>();
   constructor(public dialogRef: MatDialogRef<popUpModalComponent>) { }

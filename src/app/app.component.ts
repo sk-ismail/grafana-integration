@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DomSanitizer } from '@angular/platform-browser';
-import { popUpModalComponent } from './components/modal/modal.component';
-import { SafePipe } from './safe.pipe';
 
 export interface User{
   name: string;
@@ -21,7 +18,7 @@ export const data: any[] =[{
 })
 
 export class AppComponent {
-  constructor(public matDialog: MatDialog, public sanitizer: DomSanitizer) {
+  constructor( public sanitizer: DomSanitizer) {
     this.sanitizer=sanitizer;
     
    }
@@ -33,7 +30,7 @@ export class AppComponent {
      data.push(formData)
 
 
-    //  localStorage.setItem("datairfan", data.toString())
+
 
      console.log(data)
    }
@@ -46,12 +43,6 @@ export class AppComponent {
     }  
     }  
     } 
-
-  // grafanaUrl(){
-  //   for(let i=0; i<this.datagen.length; i++){
-  //     this.sanitizer.
-  //   }
-  // }
 
 }
 
