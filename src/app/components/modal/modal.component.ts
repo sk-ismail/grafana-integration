@@ -20,8 +20,7 @@ export class popUpModalComponent implements OnInit {
   }
 
   submitForm(){
-      console.log(this.gname);
-      console.log(this.gurl);
+
       if(this.gname===""){
         alert('enter the data');
       }
@@ -32,7 +31,7 @@ export class popUpModalComponent implements OnInit {
         this.dataValues.emit({ name: this.gname, url: this.gurl})
       }
       
-      // console.log(this.dataValues)
+    
   }
 
 

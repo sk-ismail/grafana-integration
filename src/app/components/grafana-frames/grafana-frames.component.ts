@@ -16,9 +16,9 @@ export class GrafanaFramesComponent implements OnInit {
   ngOnInit(): void {
   }
   deleteCard(val: any) {  
-    console.log("val",val)
+
     this.deleteItem.emit(val);
-    console.log(this.deleteItem)  
+  
     }  
   // data1=localStorage.getItem("datairfan")
   

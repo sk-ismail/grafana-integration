@@ -5,8 +5,8 @@
         <p class="itemName" >{{item.name}}</p>
         <button class="del-btn" type="button" (click)="deleteCard(item)">X</button>
     </div>
-        <iframe [ngStyle]=" { width: datagen.length==1? '95vw': datagen.length==2? '45vw': datagen.length>=3? '30vw': '0vw', 
-                              height: datagen.length==1? '90vh': datagen.length==2? '50vh': datagen.length>=3? '33vh': '0vh'} " 
+        <iframe [ngStyle]=" { width: datagen.length===1? '95vw': datagen.length===2? '45vw': datagen.length>=3? '30vw': '0vw', 
+                              height: datagen.length===1? '90vh': datagen.length===2? '50vh': datagen.length>=3? '33vh': '0vh'} " 
                                 style="margin-bottom: 20px;" [src]="item.url | safe"  frameborder="0">
         </iframe>   
    

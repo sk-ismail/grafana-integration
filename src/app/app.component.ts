@@ -26,17 +26,17 @@ export class AppComponent {
   //  datagen=data
   
    onsubmitForm(formData: object){
-     console.log("recieved",  formData)
+  
      data.push(formData)
 
 
 
 
-     console.log(data)
+    
    }
    
    DeletedItem(values: any){  
-     console.log("values",values)
+    
     for(var i = data.length - 1; i >= 0; i--) {  
     if(data[i].name === values.name) {  
     data.splice(i, 1);  
