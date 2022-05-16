@@ -1,5 +1,6 @@
 {
   "name": "grafana-integration",
+  "homepage": "https://sk-ismail.github.io/grafana-integration/",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
