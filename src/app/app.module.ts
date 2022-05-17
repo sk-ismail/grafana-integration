@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { popUpModalComponent } from './components/modal/modal.component';
+import { popUpModalComponent } from './components/grafana-frames/modal/modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule , MatDialogRef} from '@angular/material/dialog';

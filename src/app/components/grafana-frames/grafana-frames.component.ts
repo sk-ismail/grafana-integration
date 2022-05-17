@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { data } from 'src/app/app.component';
 
@@ -9,18 +9,16 @@ import { data } from 'src/app/app.component';
   styleUrls: ['./grafana-frames.component.css']
 })
 export class GrafanaFramesComponent implements OnInit {
-  // @Input () item :any;
-  @Output() deleteItem = new EventEmitter<any>(); 
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  deleteCard(val: any) {  
+  deleteCard(i: number) {  
 
-    this.deleteItem.emit(val);
-  
+     data.splice(i,1)
+   
     }  
-  // data1=localStorage.getItem("datairfan")
   
   datagen=data;
 }

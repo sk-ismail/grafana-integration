@@ -8,7 +8,7 @@
        align-items: center; 
        align-self: center;
        align-content: center;
-    
+        flex-wrap: wrap;
 }
 .itemName{
     margin-left: 30px;

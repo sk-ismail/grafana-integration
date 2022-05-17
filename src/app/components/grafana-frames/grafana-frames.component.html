@@ -1,13 +1,14 @@
-<div  class="grafanaMain" [ngStyle]="{ 'flex-wrap': datagen.length>3? 'wrap': 'nowrap'}">
+<app-modal  ></app-modal>
+<div  class="grafanaMain" >
 
-    <div *ngFor="let item of datagen;" class="gFrames"   >
+    <div *ngFor="let item of datagen; let i=index" class="gFrames"   >
         <div class="gcontent">
         <p class="itemName" >{{item.name}}</p>
-        <button class="del-btn" type="button" (click)="deleteCard(item)">X</button>
+        <button class="del-btn" type="button" (click)="deleteCard(i)">X</button>
     </div>
         <iframe [ngStyle]=" { width: datagen.length===1? '95vw': datagen.length===2? '45vw': datagen.length>=3? '30vw': '0vw', 
                               height: datagen.length===1? '90vh': datagen.length===2? '50vh': datagen.length>=3? '33vh': '0vh'} " 
-                                style="margin-bottom: 20px;" [src]="item.url | safe"  frameborder="0">
+                                style="margin-bottom: 20px;" [src]="item.url | safe"  frameborder="0" allowfullscreen>
         </iframe>   
    
     </div>
